@@ -5,19 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+        }
+    </style>
     <!-- Document object model -->
 </head>
 
 <body>
     <div class="bg-black">
-        <h1 class="heading">DOM Learning on chai aur code</h1>
+        <h1 class="heading">DOM Learning on chai aur code
+            <span style="display: none;">This is me shubham</span>
+        </h1>
+        <h1 class="heading">DOM Learning on chai aur code
+            <span style="display: none;">This is me shubham</span>
+        </h1>
+        <h1 id="title" class="heading">DOM Learning on chai aur code
+            <span st yle="display: none;">This is me shubham</span>
+        </h1>
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, a?</p>
+
+        <input type="password" />
     </div>
 </body>
 
 </html>
 
-     Window
+<!-- Using textCotent will give the complete text content present in that element even if it was disappered using styling -->
+ <!-- Using innerText only give the visible text of UI -->
+ <!-- Using innerHTML will give the whole text along with the inner html if present -->
+
+     <!-- Window
      |
      Document
      |
@@ -27,4 +48,4 @@
  /          \
 title    meta        div
 |        |           \
-textnode attribute  further element and property
+textnode attribute  further element and property -->
