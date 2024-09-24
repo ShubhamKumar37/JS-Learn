@@ -35,9 +35,22 @@ const arr4 = [
     {name: "Raj Kumar", title: "IT Consultant", year: 2007, salary: 500000}
 ];
 
-const arr3 = arr4.filter((item) =>
-{
-    return item.salary > 200000;
-});
+// const arr3 = arr4.filter((item) =>
+// {
+//     return item.salary > 200000;
+// });
 
-console.table(arr3);
+// console.table(arr3);
+
+// console.log(undefined?.arr1); // This will lead to no error just undefined
+
+const arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const arr6 = arr5.map((item) => // This returns the values
+// {
+//     return item + 10;
+// })
+
+// arr5.forEach((item, index) => arr5[index] = item + 10); // forEach() doesnot return any thing
+
+// console.log(arr6)
