@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let div = document.createElement("div");
+    console.log(div);
+
+    div.className = "mainDiv";
+    div.id = "myDiv";
+    div.setAttribute("Title", "backTitle frontTitle");
+    console.log(div);   
+    div.style.border = "2px solid red";
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+    div.style.backgroundColor = "blue";
+ 
+    // div.innerText; // This take 2 operation like it will overwrite the value so first it 
+    // fetch the value then it will overwrite the value
+    const textContent = document.createTextNode("This is my div so be carefull");
+    div.appendChild(textContent);
+
+    document.body.appendChild(div);
+</script>
+</html>
