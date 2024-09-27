@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    let arr = ["Python", "C++", "C", "TypeScript"];
+
+    function addList(listName)
+    {
+        let li = document.createElement("li");
+        li.innerHTML = `${listName}`;
+        const unordered_list = document.querySelector(".language");
+
+        unordered_list.appendChild(li);
+    }
+
+    function addListOpti(listName)
+    {
+        const li = document.createElement("li");
+
+        li.appendChild(document.createTextNode(listName));
+        document.querySelector(".language").appendChild(li);
+    }
+
+    arr.map((item) => addListOpti(item + " 50%"));
+
+    const thirdLang = document.querySelector("li:nth-child(3)");
+    const newList = document.createElement("li").appendChild(document.createTextNode("MYSQL 50%"));
+
+    thirdLang.replaceWith(newList);
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>Spyder</li>"
+    console.log(firstLang);
+
+    // Remove
+    // this li:nth-chid(1) represent first value of array
+    const removeEle = document.querySelector("li:nth-child(1)");
+    console.log(removeEle.innerHTML);
+    removeEle.remove();
+
+</script>
+</html>
