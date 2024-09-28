@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        /* General body styling */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container for clock */
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Clock frame container */
+        .frame {
+            height: 5rem;
+            width: 15rem;
+            border-radius: 2rem;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Time text styling */
+        #time {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        /* Button styling */
+        .button {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 1.5rem;
+            background-color: white;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: blueviolet;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Button active state */
+        .button:active {
+            transform: scale(0.98);
+        }
+
+        /* Add a glowing effect to the clock frame */
+        .frame {
+            animation: glowing 1.5s infinite;
+        }
+
+        /* Glowing animation for the frame */
+        @keyframes glowing {
+            0% { box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet; }
+            50% { box-shadow: 0 0 20px magenta, 0 0 40px magenta; }
+            100% { box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet; }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="frame">
+            <span id="time"></span>
+        </div>
+        <button class="button">
+            Time?
+        </button>
+    </div>
+</body>
+    <script src="./index.js"></script>
+
+</html>

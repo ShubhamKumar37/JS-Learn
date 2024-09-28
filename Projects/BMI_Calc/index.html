@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color : white;
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #000000;
+            color: white;
+            border-radius: 8px;
+        }
+        .bmi-form {
+            display: flex;
+            color: white;
+            flex-direction: column;
+        }
+        .bmi-form label {
+            margin-bottom: 20px;
+            color: white;
+            color: white;
+        }
+        .bmi-form p {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: white;
+        }
+        .bmi-form input {
+            width: 100%;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            
+            background-color: black;
+            color: white;
+        }
+        .bmi-form button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .bmi-form button:hover {
+            color: white;
+            background-color: #0056b3;
+        }
+        .bmi-info {
+            color: white;
+            margin-top: 20px;
+        }
+        .bmi-info h3 {
+            color: white;
+            font-size: 18px;
+            color: #007bff;
+        }
+        .bmi-info p {
+            color: white;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .bmi-info ul {
+            color: white;
+            list-style-type: none;
+            padding: 0;
+        }
+        .bmi-info ul li {
+            color: white;
+            margin-bottom: 10px;
+        }
+        .bmi-info ul li span {
+            font-weight: bold;
+            color: white;
+        }
+
+        #result
+        {
+            font-size: 2rem;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form class="bmi-form">
+            <label>
+                <p>Enter your height</p>
+                <input
+                    id="height"
+                    placeholder="In cm"
+                    type="number"
+                    />
+                </label>
+                <label>
+
+                    <p>Enter your weight</p>
+                    <input
+                    id="weight"
+                    placeholder="In Kg"
+                    type="number"
+                    />
+                </label>
+
+                <button type="submit" id="find-bmi">Find BMI</button>
+
+
+            <!-- Information about BMI index values -->
+            <div class="bmi-info">
+                <h3>Understanding BMI</h3>
+                <p>BMI (Body Mass Index) is a measure that helps indicate if you are underweight, healthy, overweight, or obese based on your height and weight.</p>
+                <ul>
+                    <li id="under-weight"><span>BMI &lt; 18.5:</span> Underweight</li>
+                    <li id="normal-weight"><span>18.5 ≤ BMI &lt; 24.9:</span> Healthy weight</li>
+                    <li id="over-weight"><span>25 ≤ BMI &lt; 29.9:</span> Overweight</li>
+                    <li id="too-much"><span>BMI ≥ 30:</span> Obesity</li>
+                    <li><span>Your BMI is </span><span  id="result"></span></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+    <script src="./index.js"></script>
+
+</html>
