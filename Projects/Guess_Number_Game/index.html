@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the game</title>
+    <link href="./index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="game-panel">
+            <h1>Guess the number</h1>
+
+            <input type="number" id="input-guess" class="input-field" value=Nan/>
+            <input type="submit" id="submit-guess" />
+
+            <div class="guess-info">
+                <h3>
+                    <p>Previous guess</p>
+                    <span id="prev-guess"></span>
+                </h3>
+
+                <h3>
+                    <p>Guess Remaining </p>
+                    <span id="remaining-guess">10</span>
+                </h3>
+                <h3 id="result-guess"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
