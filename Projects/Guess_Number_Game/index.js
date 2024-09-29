@@ -6,10 +6,7 @@ const prevGuess = document.getElementById("prev-guess");
 const remainingGuess = document.getElementById("remaining-guess");
 
 let prevGuessArray = [];
-let possibleGuess = 3;
-console.log("This is the result = ", gameResult)
-
-// console.log(inputGuess.value , "<- this is the value");   
+let possibleGuess = 10;
 
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -24,7 +21,6 @@ submitButton.addEventListener("click", (event) => {
     else if (validateInput(inputGuess.value)) {
         possibleGuess--;
         remainingGuess.textContent = possibleGuess;
-        console.log(prevGuessArray);
         addElementArray(inputGuess.value);
     }
     inputGuess.value = '';
@@ -32,13 +28,11 @@ submitButton.addEventListener("click", (event) => {
 
 function addElementArray(num) {
     prevGuessArray.push(parseInt(num));
-    console.log(prevGuessArray);
     prevGuess.innerHTML = prevGuessArray.join(" - ");
 }
 
 function validateInput(num) {
     if (num < 1 || num > 100) {
-        // Please enter number between 1 and 100 (inclusive)
         resultElement.innerHTML = "Please enter number between 1 and 100 (inclusive)";
         resultElement.style.color = 'red';
         return false;
