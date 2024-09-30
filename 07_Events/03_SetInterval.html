@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set timeout</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="heading">
+            This is a heading to which will change when click on start button but it will take 2 second
+        </h1>
+
+        <button id="start">
+            Start
+        </button>
+        <button id="end">
+            end
+        </button>
+    </div>
+</body>
+
+<script>
+    const sayHi = (str) => {
+        console.log(str, Date.now());
+    }
+
+    // This have 3 parameter first is call back function , second is the time gap after which it will repeat contineously 
+    // Third parameter is the value that can be passed to the callback function
+    let intervalFun;
+
+    // clearInterval(intervalFun); // Same like setTimeout method
+
+    document.getElementById("start").addEventListener("click", () => {
+        intervalFun = setInterval(sayHi, 1000, "This is me at time => ");
+    });
+
+    document.getElementById("end").addEventListener("click", () => {
+        clearInterval(intervalFun);
+        console.log("Now the printing is stopped");
+    });
+
+
+</script>
+
+</html>
