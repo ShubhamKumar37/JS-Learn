@@ -29,4 +29,6 @@ setUser.prototype.incAge = function()
 const shubham = new setUser("Shubham Kumar", 3);
 const sparsh = setUser("Sparsh Sharma", 1);
 
+console.log(shubham.incAge());
+
 shubham.printMe();
