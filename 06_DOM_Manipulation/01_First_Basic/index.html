@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
     <style>
-        body
-        {
+        body {
             background-color: black;
             color: white;
         }
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-    <div class="bg-black">
+    <!-- <div class="bg-black">
         <h1 class="heading">DOM Learning on chai aur code
             <span style="display: none;">This is me shubham</span>
         </h1>
@@ -29,16 +28,24 @@
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, a?</p>
 
         <input type="password" />
-    </div>
+    </div> -->
+    <div>a</div>
 </body>
+<script>
+    var divs = document.getElementsByTagName("div");
+
+    // for (var i = 0; i < divs.length; i++) {
+    //     divs[i].appendChild(document.createElement("div"));
+    // }
+</script>
 
 </html>
 
 <!-- Using textCotent will give the complete text content present in that element even if it was disappered using styling -->
- <!-- Using innerText only give the visible text of UI -->
- <!-- Using innerHTML will give the whole text along with the inner html if present -->
+<!-- Using innerText only give the visible text of UI -->
+<!-- Using innerHTML will give the whole text along with the inner html if present -->
 
-     <!-- Window
+<!-- Window
      |
      Document
      |
